@@ -25,11 +25,13 @@ public class CalculatriceTest {
     @Test
     void TestMultiplication(){
         assertEquals(64f, calculatrice.mult(8.0f, 8.0f));
+        assertEquals(28f, calculatrice.mult(14.0f, 2.0f));
     }
 
     @Test
     void TestDivision(){
         assertEquals(2.0f, calculatrice.div(8.0f, 4.0f));
+        assertEquals(4.0f, calculatrice.div(8.0f, 2.0f));
     }
 
     /** Aide https://howtodoinjava.com/junit5/expected-exception-example pour le AssertThrows*/
