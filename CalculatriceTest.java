@@ -16,23 +16,30 @@ public class CalculatriceTest {
 /** Aide de https://junit.org/junit5/docs/current/user-guide/*/
     @Test
     void TestAddition(){
-        assertEquals(5, calculatrice.add(1.0, 4.0));
-        assertEquals(10, calculatrice.add(5.0, 5.0));
+        assertEquals(5f, calculatrice.add(1.0f, 4.0f));
+        assertEquals(10f, calculatrice.add(5.0f, 5.0f));
     }
 
     @Test
     void TestMultiplication(){
-        assertEquals(64, calculatrice.add(8.0, 8.0));
+        assertEquals(64f, calculatrice.add(8.0f, 8.0f));
     }
 
     void TestDivision(){
-        assertEquals(2.0, calculatrice.div)
+        assertEquals(2.0f, calculatrice.div(8.0f, 4.0f))
     }
 
     void TestDivisionParZéro{
         ArithmeticException exception = assertThrows(ArithmeticException.class,
-                ()-> calculatrice.div(5.0, 0.0));
+                ()-> calculatrice.div(5.0f, 0.0f));
         assertEquals("Division par zéro", exception.getMessage());
 
     }
+
+    @Test
+    void testSoustraction() {
+        assertEquals(2.0f, calculatrice.minus(5.0f, 3.0f));
+        assertEquals(-1.0f, calculatrice.minus(2.0f, 3.0f));
+    }
+
 }
