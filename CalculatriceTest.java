@@ -13,7 +13,7 @@ public class CalculatriceTest {
     void init(){
         calculatrice = new Calculatrice();
     }
-
+/** Aide de https://junit.org/junit5/docs/current/user-guide/*/
     @Test
     void TestAddition(){
         assertEquals(5, calculatrice.add(1.0, 4.0));
