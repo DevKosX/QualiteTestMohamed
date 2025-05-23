@@ -1,0 +1,9 @@
+Question 3 : Quand on regarde les résultats de la couverture de code,
+on voit que les méthodes principales de la classe Calculatrice sont bien utilisées
+dans les tests add, mult, et div donc on peut penser que tout est testé mais
+il manque un petit détail : dans la méthode div, (if denominateur == 0) ne passe pas.
+donc la couverture n’est pas à 100 %.
+
+Pour améliorer notre test il faut ajouter un test qui force ce cas d’erreur,
+comme le test testDivisionParZero() qui provoque volontairement une division par zéro
+que j'ai implémenter dans la classe calulatrice

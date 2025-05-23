@@ -2,7 +2,9 @@ package com.example.demo.data;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.*;
+import org.junit.jupiter.api.BeforeEach;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -22,14 +24,18 @@ public class CalculatriceTest {
 
     @Test
     void TestMultiplication(){
-        assertEquals(64f, calculatrice.add(8.0f, 8.0f));
+        assertEquals(64f, calculatrice.mult(8.0f, 8.0f));
     }
 
+    @Test
     void TestDivision(){
-        assertEquals(2.0f, calculatrice.div(8.0f, 4.0f))
+        assertEquals(2.0f, calculatrice.div(8.0f, 4.0f));
     }
 
-    void TestDivisionParZéro{
+    /** Aide https://howtodoinjava.com/junit5/expected-exception-example pour le AssertThrows*/
+
+    @Test
+    void TestDivisionParZéro(){
         ArithmeticException exception = assertThrows(ArithmeticException.class,
                 ()-> calculatrice.div(5.0f, 0.0f));
         assertEquals("Division par zéro", exception.getMessage());
