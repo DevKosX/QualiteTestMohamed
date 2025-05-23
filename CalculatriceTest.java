@@ -17,6 +17,22 @@ public class CalculatriceTest {
     @Test
     void TestAddition(){
         assertEquals(5, calculatrice.add(1.0, 4.0));
-        assertEquals(10, calculatrice.add(5.0, 5.0))
+        assertEquals(10, calculatrice.add(5.0, 5.0));
+    }
+
+    @Test
+    void TestMultiplication(){
+        assertEquals(64, calculatrice.add(8.0, 8.0));
+    }
+
+    void TestDivision(){
+        assertEquals(2.0, calculatrice.div)
+    }
+
+    void TestDivisionParZéro{
+        ArithmeticException exception = assertThrows(ArithmeticException.class,
+                ()-> calculatrice.div(5.0, 0.0));
+        assertEquals("Division par zéro", exception.getMessage());
+
     }
 }
